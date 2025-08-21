@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/cobalt.js",
+      "src": "api/src/cobalt.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "src/cobalt.js"
+      "dest": "api/src/cobalt.js"
     }
   ]
 }
