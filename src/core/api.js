@@ -2,7 +2,7 @@ import cors from "cors";
 import http from "node:http";
 import rateLimit from "express-rate-limit";
 import { setGlobalDispatcher, EnvHttpProxyAgent } from "undici";
-import { getCommit, getBranch, getRemote, getVersion } from "@imput/version-info";
+// import { getCommit, getBranch, getRemote, getVersion } from "@imput/version-info";
 
 import jwt from "../security/jwt.js";
 import stream from "../stream/stream.js";
@@ -25,12 +25,12 @@ import * as Cookies from "../processing/cookie/manager.js";
 import * as YouTubeSession from "../processing/helpers/youtube-session.js";
 
 const git = {
-    branch: await getBranch(),
-    commit: await getCommit(),
-    remote: await getRemote(),
+    branch: 8,
+    commit: 8,
+    remote: 8,
 }
 
-const version = await getVersion();
+const version = 8;
 
 const acceptRegex = /^application\/json(; charset=utf-8)?$/;
 
